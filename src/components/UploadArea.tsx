@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { Upload, ShieldCheck, Sparkles, Zap, Lock, Smartphone } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface UploadAreaProps {
   isProcessing: boolean;
@@ -19,7 +19,7 @@ export function UploadArea({ isProcessing, onFileUpload }: UploadAreaProps) {
     }
   };
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -27,7 +27,7 @@ export function UploadArea({ isProcessing, onFileUpload }: UploadAreaProps) {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
   };
